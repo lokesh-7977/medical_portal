@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: postgres
+  password: Lokesh
+  host: localhost
+
+development:
+  <<: *default
+  database: portal
+
+test:
+  <<: *default
+  database: portal
+
+production:
+  <<: *default
+  database: production
+  username: <%= ENV['MEDICAL_PORTAL_DATABASE_USERNAME'] %>
+  
+  password: <%= ENV['MEDICAL_PORTAL_DATABASE_PASSWORD'] %>
