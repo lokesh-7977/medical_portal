@@ -8,11 +8,11 @@ default: &default
 
 development:
   <<: *default
-  database: portal
+  database: portal_development
 
 test:
   <<: *default
-  database: portal
+  database: portal_test
 
 production:
   <<: *default
